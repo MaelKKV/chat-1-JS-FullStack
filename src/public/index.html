@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CHAT JS FullStack</title>
+    <!-- BOOTSTRAP4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"
+    ></script>
+
+<!-- Own CSS -->
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-warning">
+      <a class="navbar-brand mx-auto" href="/">Chat JS FullStack</a>
+    </nav>
+    <div class="card col-md-4 mt-5 mx-auto" id="nicknameWrap">
+      <div class="card-header">
+        <h3>Enter your username:</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input type="text" id="nickname" class="form-control">
+          <button type="submit" class="btn btn-warning mt-2">
+            <i class="fas fa-location-arrow"></i>SEND
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="container" id="contentWrap">
+      <div class="row mt-2">
+        <div class="col-md-6 offset-md-1">
+          <div class="card">
+            <div class="card-header">
+              <g4>Let's Chat</g4>
+            </div>
+            <div id="chat" class="card-body">
+
+            </div>
+            <form id="message-form" class="card-footer">
+              <div class="input-group">
+                <input type="text" id="message" class="form-control">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-warning">
+                    <i class="fas fa-location-arrow"></i> SEND
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Users</h3>
+            </div>
+            <div class="card-body">
+              <div id="usernames"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
